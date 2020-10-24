@@ -1,0 +1,139 @@
+* {
+    font-family: Century Gothic, 'sans-serif';
+}
+@media (min-width: 310px) and (max-width:500px) {
+    footer {
+        align-items: center;
+        text-align: center;
+    }
+    h3, h4 {
+        padding-top: 25px;
+    }
+    .card-header>img {
+        width: 250px;
+    }
+    .productoViewModal {
+        max-width: 28%;
+    }
+    .modal-body {
+        text-align: center;
+    }
+}
+.bg-blue-ligth {
+    background-color: #009dff;
+    color: white;
+}
+.info-empresa {
+    padding: 40px;
+}
+footer {
+    clear: both;
+    background-color: #009def;
+    color: #fff;
+    padding-top: 15px;
+    padding: 15px;
+}
+.btn-contactanos {
+    background-color: #fff;
+    color: #009def;
+    width: 205px;
+}
+/*CSS DE LOS PRODUCTOS*/
+
+.productos {
+    background-color: blue;
+}
+h3, h4 {
+    color: #009def;
+}
+.btngeneral {
+    width: 100%;
+    background-color: #009def;
+    color: #fff;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
+}
+.carousel-caption>h3 {
+    font-size: 50px;
+    color: white;
+}
+.carousel-caption>p {
+    font-size: 15px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.carousel-caption {
+    text-align: left;
+    padding-bottom: 8%;
+}
+.novProductos {
+    padding-top: 15px;
+}
+.novProductos>h3 {
+    padding: 5px;
+}
+/*Productos*/
+
+.card {
+    width: 250px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
+}
+#imgProducto {
+    width: 80px;
+    height: 100px;
+}
+.col-sm {
+    padding: 7px;
+}
+a {
+    color: #000;
+}
+.categorias-productos-p {
+    padding-top: 40px;
+}
+.col-sm>a {
+    text-decoration: none;
+}
+.list-group>a {
+    text-decoration: none;
+    text-align: center;
+}
+#imgProductM {
+    width: 120px;
+    height: 120px;
+}
+.price {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+.descripcion-corta {
+    font-size: 15px;
+}
+.a-detalle-producto {
+    font-size: 15px;
+    align-content: left;
+}
+.product-descripcion-larga {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.product-descripcion-larga>.btn-close {
+    text-align: center;
+}
+.btn-close {
+    background-color: #009def;
+    color: white;
+    width: 150px;
+}
+.container-detalle {
+    padding: 50px;
+}
+.admin-productos {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
