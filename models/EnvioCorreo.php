@@ -17,13 +17,13 @@ class EnvioCorreo{
         $mail = new PHPMailer\PHPMailer\PHPMailer();
         $mail->isSMTP();
         $mail->SMTPDebug = 0;
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = 'mail.gemetech.co';
         $mail->Port = 587;
         $mail->SMTPSecure = 'tls';
         $mail->SMTPAuth = true;
-        $mail->Username = "infoventasyg@gmail.com";
-        $mail->Password = "Ke6T7aK89";
-        $mail->setFrom('infoventasyg@gmail.com', 'MovilServ Formularios');
+        $mail->Username = "info@gemetech.co";
+        $mail->Password = "Ke6T7aK89@";
+        $mail->setFrom('info@gemetech.co', 'MovilServ Formularios');
         $mail->addAddress($emailEmpresa, $emailEmpresa);
         $mail->Subject = 'Formulario de Contacto';
         $mail->Body = " 

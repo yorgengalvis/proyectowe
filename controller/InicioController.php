@@ -44,12 +44,12 @@ class InicioController
 			$emaile=$envioCorreo->enviar($empresas[0]->emailcontacto);
 			if($emaile){
 				$modeloSlider=new SliderDAO();
-		$sliders=$modeloSlider->findAll();
-		$model=new EmpresaDAO();
-		$empresas=$model->find('nombre','MovilSec');
-		require_once 'views/layout/header.php';
-		require_once 'views/index/enviado.php';
-		require_once 'views/layout/footer.php';
+				$sliders=$modeloSlider->findAll();
+				$model=new EmpresaDAO();
+				$empresas=$model->find('nombre','MovilSec');
+				require_once 'views/layout/header.php';
+				require_once 'views/index/enviado.php';
+				require_once 'views/layout/footer.php';
 			}
 		}
 		
