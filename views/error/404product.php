@@ -15,24 +15,8 @@
         </ul>
     </div>
     <div class="col-sm-9">
-      <h3><strong>Detalle del producto</strong></h3>
-      <div class="modal-body">
-        <div class="container">
-            <div class="row">
-                <div  class="col-sm"><img id="imgProductM" src="<?=BASE_URL?>public/img_Productos/<?=$producto->foto?>" /></div>
-                <div class="col-sm">
-                    <small><strong>Tecnologia</strong></small>
-                    <h3><?=$producto->nombre?><p><label class="price">$1.000.000</label></p></h3>
-                    <label class="descripcion-corta"><?=$producto->descripcioncorta?></label>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="product-descripcion-larga">
-            <?=$producto->detalle?> </p>
-        </div>
-    </div>
+      <h3><strong><center>Error 404:  Producto inexistente</center></strong></h3>
+      
 </div>
 </div>
 </div>

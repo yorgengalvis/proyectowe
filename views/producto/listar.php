@@ -25,13 +25,17 @@
         </div>
         <?php
                     $i=0;
+                    $v='modProducto';
+                    if($o==1){
+                      $v='moProducto';
+                    }
                     echo '<div class="productsview container row ">';
                     foreach ($productos as $variable) {
                         $i++;
                         if($i<=6){
                         echo '
                         <div class="col-sm">
-                            <a onClick="modProducto('.$variable->id.');" ">
+                            <a onClick="'.$v.'('.$variable->id.');" ">
                                 <div class="card">
                                     <img alt="Card image cap" class="card-img-top" id="imgProducto" src="'.BASE_URL.'public/img_Productos/'.$variable->foto.'">
                                     <div class="card-body">

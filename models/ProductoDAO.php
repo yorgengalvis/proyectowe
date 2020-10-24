@@ -51,14 +51,12 @@ class ProductoDAO
 		return Producto::limit(6)->get();
 	}
 
-	public function getModal($id,$bol){
+	public function getModal($id){
 		$producto=Producto::find($id);
 		setlocale(LC_MONETARY, 'es_CO');
 		$valor=$producto->valor;
-		$var='producto/detalle/'.$producto->id.'';
-		if($bol==2){
-			$var='detalle/'.$producto->id.'';
-		}
+		$var=BASE_URL.'producto/detalle/'.$producto->id.'';
+		
 		echo '
 		<div class="container">
         <div class="row">

@@ -3,7 +3,15 @@ $(document).ready(function() {
 });
 
 function modProducto(id) {
-    $("#producto-content").load('consultaModal/' + id + '/2', function() {
+    $("#producto-content").load('consultaModal/' + id, function() {
+        $("#productoViewModal").modal({
+            show: true
+        });
+    });
+}
+
+function moProducto(id) {
+    $("#producto-content").load('../consultaModal/' + id, function() {
         $("#productoViewModal").modal({
             show: true
         });
@@ -11,7 +19,7 @@ function modProducto(id) {
 }
 
 function modalProducto(id) {
-    $("#producto-content").load('producto/consultaModal/' + id + '/1', function() {
+    $("#producto-content").load('producto/consultaModal/' + id, function() {
         $("#productoViewModal").modal({
             show: true
         });
