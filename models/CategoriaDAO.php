@@ -1,5 +1,5 @@
 <?php
-require_once 'entity/Categoria';
+require_once 'entity/Categoria.php';
 
 class CategoriaDAO{
 	
@@ -22,9 +22,10 @@ class CategoriaDAO{
 	}
 
 	public function find($opcion,$valor){
-		$categoria = Categoria::where($opcion,$valor)->get();
+		$categoria = Categoria::where($opcion,'=',$valor)->get();
 		return $categoria;
 	}
+
 
 	public function findAll(){
 		return Categoria::get();

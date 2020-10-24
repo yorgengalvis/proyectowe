@@ -1,5 +1,5 @@
 <?php
-define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/ProyectoWeb/');
+define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/proyectowe/');
 
 require_once 'vendor/autoload.php';
 require_once 'models/database.php';

@@ -11,10 +11,10 @@ require_once 'views/modals/contactanos.php';
                     Información de contacto:
                 </strong>
                 <p>
-                    <img height="30px" src="views/assets/img/email.png" width="30px"/>
+                    <img height="30px" src="<?php echo BASE_URL;?>views/assets/img/email.png" width="30px"/>
                     <?php echo $empresas[0]->emailcontacto;?>
                 </p>
-                <img height="30px" src="views/assets/img/telefono.png" width="30px"/>
+                <img height="30px" src="<?php echo BASE_URL;?>views/assets/img/telefono.png" width="30px"/>
                 <?php echo $empresas[0]->telefonocontacto;?>
             </div>
             <div class="col-sm-3">
@@ -23,13 +23,13 @@ require_once 'views/modals/contactanos.php';
                 </strong>
                 <p>
                     <a href="<?php echo $empresas[0]->facebook;?>">
-                        <img height="40px" src="views/assets/img/facebook.png" width="40px"/>
+                        <img height="40px" src="<?php echo BASE_URL;?>views/assets/img/facebook.png" width="40px"/>
                     </a>
                     <a href="<?php echo $empresas[0]->instagram;?>">
-                        <img height="40px" src="views/assets/img/instagram.png" width="46px"/>
+                        <img height="40px" src="<?php echo BASE_URL;?>views/assets/img/instagram.png" width="46px"/>
                     </a>
                     <a href="<?php echo $empresas[0]->twitter;?>">
-                        <img height="40px" src="views/assets/img/twitter.png" width="40px"/>
+                        <img height="40px" src="<?php echo BASE_URL;?>views/assets/img/twitter.png" width="40px"/>
                     </a>
                 </p>
                 <p>
@@ -54,7 +54,7 @@ require_once 'views/modals/contactanos.php';
 <script crossorigin="anonymous" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
 </script>
 <script crossorigin="anonymous" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-<script src="views/assets/js/custom.js">
+<script src="<?php echo BASE_URL;?>views/assets/js/custom.js">
 </script>
 </body>
 </html>

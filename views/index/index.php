@@ -25,7 +25,7 @@
                         if($i<=6){
                         echo '
                         <div class="col-sm">
-                            <a onClick="obtenerModel("Fracne");" data-toggle="modal" data-target="#productoViewModal">
+                            <a onClick="modalProducto('.$variable->id.');" ">
                                 <div class="card">
                                     <img alt="Card image cap" class="card-img-top" id="imgProducto" src="public/img_Productos/'.$variable->foto.'">
                                     <div class="card-body">
@@ -44,7 +44,7 @@
                     echo '</div>';
                     ?>
                 </div>
-<a href="productos/list" class="btn btngeneral btn-sm" type="button">
+<a href="producto/list" class="btn btngeneral btn-sm" type="button">
     Ver todos los productos
 </a>
 </div>
