@@ -3,6 +3,7 @@
 require_once 'models/EmpresaDAO.php';
 require_once 'models/ProductoDAO.php';
 require_once 'models/SliderDAO.php';
+require_once 'models/EnvioCorreo.php';
 class InicioController
 { 
 
@@ -34,6 +35,7 @@ class InicioController
 		$email=$_POST['email'];
 		$asunto=$_POST['asunto'];
 		$envioCorreo=new EnvioCorreo();
+		$model=new EmpresaDAO();
 		$empresas=$model->find('nombre','MovilSec');
 		if (!empty($name) && !empty($email) && !empty($asunto) ) {
 			$envioCorreo->setName($name);
@@ -41,7 +43,13 @@ class InicioController
 			$envioCorreo->setAsunto($asunto);
 			$emaile=$envioCorreo->enviar($empresas[0]->emailcontacto);
 			if($emaile){
-				require_once 'views/index/CorreoEnviado.php';
+				$modeloSlider=new SliderDAO();
+		$sliders=$modeloSlider->findAll();
+		$model=new EmpresaDAO();
+		$empresas=$model->find('nombre','MovilSec');
+		require_once 'views/layout/header.php';
+		require_once 'views/index/enviado.php';
+		require_once 'views/layout/footer.php';
 			}
 		}
 		
