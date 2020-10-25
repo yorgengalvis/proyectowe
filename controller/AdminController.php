@@ -11,6 +11,8 @@ class AdminController
     }
 
 	function index(){
+
+		
 	
 	}
 	 function login(){

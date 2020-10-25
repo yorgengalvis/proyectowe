@@ -1,0 +1,22 @@
+.container {
+    padding: 18%;
+}
+.card-header {
+    background-color: #009dff;
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+}
+.btn-login {
+    background-color: #009dff;
+    color: white;
+}
+.card-body {
+    text-align: center;
+}
+body {
+    background-color: #b2b2b2;
+}
+* {
+    font-family: Century Gothic, 'sans-serif';
+}

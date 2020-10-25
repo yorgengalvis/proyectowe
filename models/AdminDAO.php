@@ -15,6 +15,7 @@ class AdminDAO
 	$admin->Password=$arrayAdmin->Password;
 	$admin->nombres=$arrayAdmin->nombres;
 	$empresa->save();
+
 	}
 
 	public function eliminar($id){
@@ -29,6 +30,7 @@ class AdminDAO
 	public function findAll(){
 		return Admin::get();
 	}
+
 
 }
 ?>

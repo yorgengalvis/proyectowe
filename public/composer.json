@@ -1,0 +1,6 @@
+{
+    "require": {
+        "illuminate/database": "^8.10",
+        "raveren/kint": "^3.1"
+    }
+}
