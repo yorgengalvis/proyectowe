@@ -45,11 +45,11 @@ class AdminController
 		require_once 'views/admin/layout/footer.php';
 	}
 
-	function empresa(){
+	function configuracion(){
 		session_start();
 		$administrador=$_SESSION['admin'];
 		require_once 'views/admin/layout/header.php';
-		require_once 'views/admin/empresa/index.php';
+		require_once 'views/admin/configuracion/index.php';
 		require_once 'views/admin/layout/footer.php';
 	}
 

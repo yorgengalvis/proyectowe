@@ -29,7 +29,7 @@
             <a href="productos" class="nav-item nav-link">Productos</a>
             <a href="categorias" class="nav-item nav-link">Categorias</a>
             <a href="marcas" class="nav-item nav-link">Marcas</a>
-            <a href="empresa" class="nav-item nav-link">Empresa</a>
+            <a href="configuracion" class="nav-item nav-link">Configuracion</a>
         </div>
         <div class="navbar-nav ml-auto">
             <a href="cerrar" class="nav-item nav-link"><span class="oi oi-power-standby"></span> Cerrar Sesion</a>

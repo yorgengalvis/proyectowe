@@ -1,5 +1,9 @@
 
-
+<footer class="fixed-bottom">
+	<div class="containter" style="text-align:center;">
+     &copy; 2020 Estudiantes 6to Semestre Ingenieria de Sistemas UFPS - Cúcuta
+    </div>
+</footer>
   <!--Inclusión JS-->
 <script
   src="https://code.jquery.com/jquery-3.5.1.js"

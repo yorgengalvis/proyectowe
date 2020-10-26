@@ -18,6 +18,9 @@
     .modal-body {
         text-align: center;
     }
+    .titulo-venta {
+        padding-bottom: 15px;
+    }
 }
 .bg-blue-ligth {
     background-color: #009dff !important;

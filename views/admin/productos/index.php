@@ -43,7 +43,7 @@
                 	break;
                 }
                 echo '</td>
-                <td><a  onClick="modificar('.$producto->id.');"><span class="badge badge-warning"><span class="oi oi-pencil"></span> Editar</span></a> Eliminar</td>
+                <td><a onClick="modificarP('.$producto->id.');"><span class="btn badge badge-warning"><span class="oi oi-pencil"></span> Editar</span></a> <a  onClick="eliminarP('.$producto->id.')"><span class="btn badge badge-danger"><span class="oi oi-x"></span>  Eliminar</span></a></td>
             </tr>';
 			}
         	?>
