@@ -26,6 +26,9 @@ class CategoriaDAO{
 		return $categoria;
 	}
 
+	public function get($id){
+		return Categoria::find($id);
+	}
 
 	public function findAll(){
 		return Categoria::get();

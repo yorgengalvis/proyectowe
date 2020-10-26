@@ -20,8 +20,8 @@
     }
 }
 .bg-blue-ligth {
-    background-color: #009dff;
-    color: white;
+    background-color: #009dff !important;
+    color: white !important;
 }
 .info-empresa {
     padding: 40px;
@@ -130,10 +130,33 @@ a {
     color: white;
     width: 150px;
 }
+.breadcrumb {
+    background-color: #009def;
+}
+.breadcrumb-item>a {
+    color: white !important;
+}
+.active>a {
+    color: #000!important;
+}
 .container-detalle {
     padding: 50px;
 }
 .admin-productos {
     padding-top: 50px;
     padding-bottom: 50px;
+}
+.info-admin-dashboard {
+    background-color: #695757;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.titulo-venta {
+    text-align: center;
+    color: #009def;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-bottom: 40px;
 }

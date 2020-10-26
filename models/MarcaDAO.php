@@ -21,7 +21,7 @@ class MarcaDAO
 	}
 
 	public function find($opcion,$valor){
-		$marca = Marca::where($opcion,$valor)->get();
+		$marca = Marca::where($opcion,'=',$valor)->get();
 		return $marca;
 	}
 

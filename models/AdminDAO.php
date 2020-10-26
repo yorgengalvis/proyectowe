@@ -23,7 +23,7 @@ class AdminDAO
 	}
 
 	public function find($opcion,$valor){
-		$admin = Admin::where($opcion,$valor)->get();
+		$admin = Admin::where($opcion,"=",$valor)->get();
 		return $admin;
 	}
 

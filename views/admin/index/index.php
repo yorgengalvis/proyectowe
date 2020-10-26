@@ -1,31 +1,5 @@
-<!DOCTYPE doctype html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" rel="stylesheet">
-    <link href="<?php echo BASE_URL;?>views/assets/css/estilos.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>views/assets/open-ionic/font/css/open-iconic-bootstrap.min.css">
-    <title>
-        MovilServ | Tecnologia a tu alcance
-    </title>
-</head>
-<body>
-    <!--menu-->
-    <nav class="navbar navbar-light bg-blue-ligth fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="<?=BASE_URL?>inicio">
-                <img alt="" loading="lazy" src="<?php echo BASE_URL;?>views/assets/img/logo.png" width="50%">
-            </img>
-                    
-                <a href="<?=BASE_URL?>admin/login"><span class="btn btn-primary">Inicia Sesion</span></a>
-              
-        </a>
-        
-
-    </div>
-</nav>
-<!--menu-->
+<center><h3><b>Sliders de la pagina principal<b></h3></center>
+<p>
 <!--SLIDER-->
 <div class="carousel slide carousel-fade" data-ride="carousel" id="carousel1">
     <div class="carousel-inner">

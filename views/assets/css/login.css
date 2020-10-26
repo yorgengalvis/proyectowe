@@ -14,9 +14,7 @@
 .card-body {
     text-align: center;
 }
-body {
-    background-color: #b2b2b2;
-}
+body {}
 * {
     font-family: Century Gothic, 'sans-serif';
 }

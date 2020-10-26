@@ -34,6 +34,10 @@ class ProductoDAO
 		$producto = Producto::where($opcion,'=',$valor)->get();
 		return $producto;
 	}
+	public function findLike($opcion,$valor){
+		$producto = Producto::where($opcion,'LIKE','%'.$valor.'%')->get();
+		return $producto;
+	}
 
 	public function getCount($opcion,$valor){
 		return Producto::where([$opcion => $valor])->get()->count();
@@ -51,9 +55,31 @@ class ProductoDAO
 		return Producto::limit(6)->get();
 	}
 
+	public function getProductosAjax($name){
+		$productos = Producto::where('nombre','LIKE','%'.$name.'%')->get();
+		echo '<div class="productsview container row ">';
+		foreach ($productos as $producto) {
+			echo '
+                        <div class="col-sm">
+                            <a onClick="modProducto('.$producto->id.');" ">
+                                <div class="card">
+                                    <img alt="Card image cap" class="card-img-top" id="imgProducto" src="'.BASE_URL.'public/img_Productos/'.$producto->foto.'">
+                                    <div class="card-body">
+                                        <h5 class="card-title">'.$producto->nombre.'
+                                        </h5>
+                                    </div>
+                                </img>
+                            </div>
+                        </a>
+                    </div>
+                        ';
+		}
+		echo "</div>";
+	}
+
+
 	public function getModal($id){
 		$producto=Producto::find($id);
-		setlocale(LC_MONETARY, 'es_CO');
 		$valor=$producto->valor;
 		$var=BASE_URL.'producto/detalle/'.$producto->id.'';
 		
@@ -62,8 +88,8 @@ class ProductoDAO
         <div class="row">
             <div  class="col-sm"><img id="imgProductM" src="'.BASE_URL.'public/img_Productos/'.$producto->foto.'" /></div>
             <div class="col-sm">
-                <small><strong>Tecnologia</strong></small>
-                <h3>'.$producto->nombre.'<p><label class="price">'.number_format($valor).'</label></p></h3>
+                <small><strong>'.Categoria::find($producto->categoria_id)->descripcion.'</strong></small>
+                <h3>'.$producto->nombre.'<p><label class="price">$'.number_format($valor).'</label></p></h3>
                 <label class="descripcion-corta">'.$producto->descripcioncorta.'</label>
                 <p><a class="a-detalle-producto" href='.$var.'>Más <span class="oi oi-chevron-right"></span></a></p>
             </div>

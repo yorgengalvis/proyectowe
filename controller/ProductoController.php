@@ -13,7 +13,8 @@ class ProductoController
 	}
 
 	function index(){
-$categoria=new CategoriaDAO();
+		$O=0;
+		$categoria=new CategoriaDAO();
 		$categorias=$categoria->findAll();
 		$model=new EmpresaDAO();
 		$empresas=$model->find('nombre','MovilSec');
@@ -25,8 +26,9 @@ $categoria=new CategoriaDAO();
 		require_once 'views/producto/listar.php';
 		require_once 'views/layout/footer.php';
 	}
-	function create(){
 
+	function create(){
+		echo "ESTAS EN CREATE";
 	}
 
 
@@ -88,6 +90,12 @@ $categoria=new CategoriaDAO();
 		}
 		require_once 'views/layout/footer.php';
 	}
+
+	function busqueda($name){
+		$modelo=new ProductoDAO();
+		$modelo->getProductosAjax($name);
+	}
+
 
 	function consultaModal($id){
 		$modelo=new ProductoDAO();

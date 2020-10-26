@@ -5,6 +5,7 @@ require_once 'vendor/autoload.php';
 require_once 'models/database.php';
 
 
+
 if(!isset($_GET['url'])){
 	$controller="inicio";
 	$rutaControlador = "controller/".$controller."Controller.php";

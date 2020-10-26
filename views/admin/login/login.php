@@ -4,7 +4,7 @@
       Inicio de sesion
     </div>
     <div class="card  card-body">
-      <form action="consultar" method="POST">
+      <form action="validate" method="POST">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1"><span class="oi oi-person"></span></span>
