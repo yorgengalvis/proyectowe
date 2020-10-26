@@ -30,32 +30,28 @@ class AdminController
 	function productos(){
 		$modelProducto=new ProductoDAO();
 		$productos=$modelProducto->findAll();
-		session_start();
-		$administrador=$_SESSION['admin'];
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/productos/index.php';
 		require_once 'views/admin/layout/footer.php';
 	}
 
 	function categorias(){
-		session_start();
-		$administrador=$_SESSION['admin'];
+		$model=new CategoriaDAO();
+		$categorias=$model->findAll();
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/categorias/index.php';
 		require_once 'views/admin/layout/footer.php';
 	}
 
 	function configuracion(){
-		session_start();
-		$administrador=$_SESSION['admin'];
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/configuracion/index.php';
 		require_once 'views/admin/layout/footer.php';
 	}
 
 	function marcas(){
-		session_start();
-		$administrador=$_SESSION['admin'];
+		$model=new MarcaDAO();
+		$marcas=$model->findAll();
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/marcas/index.php';
 		require_once 'views/admin/layout/footer.php';
@@ -80,6 +76,20 @@ class AdminController
 		header('Location: login');
 	}
 
+	function edit_product($id){
+		$productos=new ProductoDAO();
+		$producto=$productos->find('id',$id);
+		require_once 'views/admin/layout/header.php';
+		require_once 'views/admin/productos/edit.php';
+		require_once 'views/admin/layout/footer.php';
+	}
+
+	function add_product(){
+		require_once 'views/admin/layout/header.php';
+		require_once 'views/admin/productos/add.php';
+		require_once 'views/admin/layout/footer.php';
+	
+	}
 
 	function validate(){
 		$usuario=$_POST['usuario'];
@@ -98,7 +108,6 @@ class AdminController
 		header('Location: login');
 		}
 	}
-
 }
 
 ?>

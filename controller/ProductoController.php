@@ -27,14 +27,11 @@ class ProductoController
 		require_once 'views/layout/footer.php';
 	}
 
-	function create(){
-		echo "ESTAS EN CREATE";
+	function get($id){
+		$modelo=new ProductoDAO();
+		$modelo->find('id',$id);
 	}
 
-
-	function editar(){
-		
-	}
 
 	function list(){
 		$categoria=new CategoriaDAO();

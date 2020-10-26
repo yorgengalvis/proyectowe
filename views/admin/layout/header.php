@@ -1,4 +1,9 @@
 
+<?php
+error_reporting(0);
+session_start();
+        $administrador=$_SESSION['admin'];
+?>
 <!DOCTYPE doctype html>
 <html lang="es">
 <head>
@@ -8,6 +13,7 @@
   <link href="<?php echo BASE_URL?>views/assets/css/estilos.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>views/assets/open-ionic/font/css/open-iconic-bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>views/assets/css/admin.css">
   <title>
     Dashboard | MovilServ
   </title>
@@ -16,7 +22,7 @@
 
 <!--nav-->
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-    <a href="#" class="navbar-brand">
+    <a href="index" class="navbar-brand">
         <img src="<?php echo BASE_URL;?>views/assets/img/logo.png" height="28" alt="CoolBrand">
     </a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -25,11 +31,11 @@
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
-            <a href="index" class="nav-item nav-link active">Inicio</a>
-            <a href="productos" class="nav-item nav-link">Productos</a>
-            <a href="categorias" class="nav-item nav-link">Categorias</a>
-            <a href="marcas" class="nav-item nav-link">Marcas</a>
-            <a href="configuracion" class="nav-item nav-link">Configuracion</a>
+            <a href="<?=BASE_URL?>admin/index" class="nav-item nav-link active"><span class="oi oi-home"></span> Inicio</a>
+            <a href="<?=BASE_URL?>admin/productos" class="nav-item nav-link"><span class="oi oi-hard-drive"></span> Productos</a>
+            <a href="<?=BASE_URL?>admin/categorias" class="nav-item nav-link"><span class="oi oi-list"></span> Categorias</a>
+            <a href="<?=BASE_URL?>admin/marcas" class="nav-item nav-link"><span class="oi oi-badge"></span> Marcas</a>
+            <a href="<?=BASE_URL?>admin/configuracion" class="nav-item nav-link"><span class="oi oi-cog"></span> Configuracion</a>
         </div>
         <div class="navbar-nav ml-auto">
             <a href="cerrar" class="nav-item nav-link"><span class="oi oi-power-standby"></span> Cerrar Sesion</a>

@@ -19,7 +19,10 @@
         text-align: center;
     }
     .titulo-venta {
-        padding-bottom: 15px;
+        padding-bottom: 15px !important;
+    }
+    .nuevo-producto {
+        text-align: center !important;
     }
 }
 .bg-blue-ligth {
@@ -161,5 +164,13 @@ a {
     color: #009def;
     font-weight: bold;
     font-size: 1.5em;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
+}
+.title-p {
+    background-color: #009def !important;
+    color: white;
+}
+.nuevo-producto {
+    padding-bottom: 15px;
+    text-align: right;
 }
