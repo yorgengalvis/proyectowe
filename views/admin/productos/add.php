@@ -14,7 +14,7 @@
             <center>Nuevo Producto</center>
         </div>
         <div class="card card-body">
-            <form action="<?=BASE_URL?>producto/edit/" method="POST" class="needs-validation" novalidate>
+            <form action="<?=BASE_URL?>producto/edit/" method="POST" >
 
 
                 <div class="form-row">
@@ -45,7 +45,7 @@
 
 
 
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-4 mb-4">
                         <label class="control-label">Detalle: </label>
                         <textarea class="form-control" rows="3" id="detalle" name="detalle"
                             placeholder="Digite Detalle"></textarea>
@@ -105,14 +105,16 @@
                         <label class="control-label">Marca: </label>
                         <input type="text" class="form-control" id="marca" name="marca" placeholder="Digite Marca">
                     </div>
-                </div>
+                    </div>
+                
 
 
 
-                <div class="form-group">
+                 <div class="form-group">
                     <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary">Guardar</button>
-                </div>
+                 </div>
+            
 
             </form>
         </div>

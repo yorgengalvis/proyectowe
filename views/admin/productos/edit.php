@@ -17,7 +17,7 @@
 			<form action="<?=BASE_URL?>producto/edit/" method="POST">
 
 			<div class="form-row">
-                    <div class="col-md-4 mb-2">
+                    <div class="col-md-4 mb-3">
                         <label class="control-label">Referencia: </label>
                         <input type="text" class="form-control" id="referencia" name="referencia"
                             placeholder="Digite Referencia">
@@ -112,7 +112,7 @@
                     <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
-				</div>
+				
 
 			</form>
 		</div>
