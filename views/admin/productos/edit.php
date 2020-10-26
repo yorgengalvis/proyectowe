@@ -72,6 +72,7 @@
 
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Foto: </label>
+                        <br>
                         <input type="file" multiple="multiple" id="photo" />
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-cloud fa-stack-2x bottom pulsating"></i>
