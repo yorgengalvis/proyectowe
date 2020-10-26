@@ -28,6 +28,7 @@ class AdminController
 	}
 
 	function productos(){
+		$this->validacionUsuario();
 		$modelProducto=new ProductoDAO();
 		$productos=$modelProducto->findAll();
 		require_once 'views/admin/layout/header.php';
@@ -36,6 +37,7 @@ class AdminController
 	}
 
 	function categorias(){
+		$this->validacionUsuario();
 		$model=new CategoriaDAO();
 		$categorias=$model->findAll();
 		require_once 'views/admin/layout/header.php';
@@ -44,12 +46,14 @@ class AdminController
 	}
 
 	function configuracion(){
+		$this->validacionUsuario();
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/configuracion/index.php';
 		require_once 'views/admin/layout/footer.php';
 	}
 
 	function marcas(){
+		$this->validacionUsuario();
 		$model=new MarcaDAO();
 		$marcas=$model->findAll();
 		require_once 'views/admin/layout/header.php';
@@ -77,6 +81,7 @@ class AdminController
 	}
 
 	function edit_product($id){
+		$this->validacionUsuario();
 		$productos=new ProductoDAO();
 		$producto=$productos->find('id',$id);
 		require_once 'views/admin/layout/header.php';
@@ -84,11 +89,42 @@ class AdminController
 		require_once 'views/admin/layout/footer.php';
 	}
 
+	function edit_categoria($id){
+		$this->validacionUsuario();
+		require_once 'views/admin/layout/header.php';
+		require_once 'views/admin/categorias/edit.php';
+		require_once 'views/admin/layout/footer.php';
+	}
+	function add_categoria(){
+		$this->validacionUsuario();
+		require_once 'views/admin/layout/header.php';
+		require_once 'views/admin/categorias/add.php';
+		require_once 'views/admin/layout/footer.php';
+	}
+	function edit_marca($id){
+		$this->validacionUsuario();
+		require_once 'views/admin/layout/header.php';
+		require_once 'views/admin/marcas/edit.php';
+		require_once 'views/admin/layout/footer.php';
+	}
+	function add_marca(){
+		$this->validacionUsuario();
+		require_once 'views/admin/layout/header.php';
+		require_once 'views/admin/marcas/add.php';
+		require_once 'views/admin/layout/footer.php';
+	}
+
 	function add_product(){
+		$this->validacionUsuario();
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/productos/add.php';
 		require_once 'views/admin/layout/footer.php';
 	
+	}
+
+	function validacionUsuario(){
+		session_start();
+		if(!$_SESSION['admin']) header('Location: index');
 	}
 
 	function validate(){

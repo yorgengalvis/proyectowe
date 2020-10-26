@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="index">Inicio</a></li>
+			<li class="breadcrumb-item"><a href="<?=BASE_URL?>admin/index">Inicio</a></li>
 			<li class="breadcrumb-item "><a href="<?=BASE_URL?>admin/productos">Productos</a></li>
 			<li class="breadcrumb-item active"><a href='<?=BASE_URL?>admin/edit_product/<?=$producto[0]->id?>'>Editar</a></li>
 		</ol>
@@ -15,6 +15,7 @@
 		</div>
 		<div class="card card-body">
 			<form action="<?=BASE_URL?>producto/edit/" method="POST">
+
 			<div class="form-row">
                     <div class="col-md-4 mb-2">
                         <label class="control-label">Referencia: </label>
@@ -111,6 +112,8 @@
                     <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
+				</div>
+
 			</form>
 		</div>
 	</div>
