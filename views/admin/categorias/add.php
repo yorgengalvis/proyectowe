@@ -14,7 +14,26 @@
 		</div>
 		<div class="card card-body">
 			<form action="<?=BASE_URL?>producto/edit/" method="POST">
-				dads
+			<div class="form-row">
+                
+
+                    <div class="col-md-10 mb-3">
+                        <label class="control-label">Descricion: </label>
+                        <textarea class="form-control" rows="3" id="descricion" name="descricion"
+                            placeholder="Digite Descricion"></textarea>
+                    </div>
+
+					<div class="col-md-10 mb-3">
+                        <label class="control-label">Estado:</label>
+                        <input type="text" class="form-control" id="nombre" name="estado" placeholder="Estado">
+                    </div>
+
+					</div>
+
+                 <div class="form-group">
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                 </div>
 			</form>
 		</div>
 	</div>
