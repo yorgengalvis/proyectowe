@@ -38,7 +38,7 @@
                 	break;
                 }
                 echo '</td>
-                <td><a href="edit_categoria/'.$categoria->id.'"><span class="btn badge badge-warning"><span class="oi oi-pencil"></span> Editar</span></a> <a  onClick="eliminarC('.$categoria->id.')"><span class="btn badge badge-danger"><span class="oi oi-x"></span>  Eliminar</span></a></td>
+                <td><a href="edit_categoria/'.$categoria->id.'"><span class="btn badge badge-warning"><span class="oi oi-pencil"></span> Editar</span></a> <a href="'.BASE_URL.'categoria/eliminar/'.$categoria->id.'"><span class="btn badge badge-danger"><span class="oi oi-x"></span>  Eliminar</span></a></td>
             </tr>';
 			}
         	?>

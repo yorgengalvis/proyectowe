@@ -82,6 +82,10 @@ class AdminController
 
 	function edit_product($id){
 		$this->validacionUsuario();
+		$modelMarca=new MarcaDAO();
+		$marcas=$modelMarca->findAll();
+		$categoria=new CategoriaDAO();
+		$categorias=$categoria->findAll();
 		$productos=new ProductoDAO();
 		$producto=$productos->find('id',$id);
 		require_once 'views/admin/layout/header.php';
@@ -90,6 +94,8 @@ class AdminController
 	}
 
 	function edit_categoria($id){
+		$model=new CategoriaDAO();
+		$categoria=$model->get($id);
 		$this->validacionUsuario();
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/categorias/edit.php';
@@ -115,6 +121,10 @@ class AdminController
 	}
 
 	function add_product(){
+		$modelMarca=new MarcaDAO();
+		$marcas=$modelMarca->findAll();
+		$categoria=new CategoriaDAO();
+		$categorias=$categoria->findAll();
 		$this->validacionUsuario();
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/productos/add.php';

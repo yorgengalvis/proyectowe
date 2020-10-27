@@ -13,19 +13,22 @@
 			<center>Nueva Categoria</center>
 		</div>
 		<div class="card card-body">
-			<form action="<?=BASE_URL?>producto/edit/" method="POST">
+			<form action="<?=BASE_URL?>categoria/create/" method="POST">
 			<div class="form-row">
                 
 
                     <div class="col-md-10 mb-3">
-                        <label class="control-label">Descricion: </label>
-                        <textarea class="form-control" rows="3" id="descricion" name="descricion"
+                        <label class="control-label">Descripcion: </label>
+                        <textarea class="form-control" rows="3" name="descripcion"
                             placeholder="Digite Descricion"></textarea>
                     </div>
 
 					<div class="col-md-10 mb-3">
                         <label class="control-label">Estado:</label>
-                        <input type="text" class="form-control" id="nombre" name="estado" placeholder="Estado">
+                        <select class="form-control" name="estado">
+                        	<option value="s">Disponible</option>
+                        	<option value="n">Inactivo</option>
+                        </select>
                     </div>
 
 					</div>

@@ -8,8 +8,9 @@ class ProductoController
 {
 
 	function eliminar($id){
-		$model=new EmpresaDAO();
+		$model=new ProductoDAO();
 		$model->eliminar($id);
+		header('Location: '.BASE_URL.'admin/productos');
 	}
 
 	function index(){
@@ -69,6 +70,83 @@ class ProductoController
 		require_once 'views/producto/listar.php';
 		require_once 'views/layout/footer.php';
 	}
+
+	function create(){
+		$referencia=$_POST['referencia'];
+		$valor=$_POST['valor'];
+		$nombre=$_POST['nombre'];
+		$descripcioncorta=$_POST['descripcioncorta'];
+		$detalle=$_POST['detalle'];
+		$palabrasclave=$_POST['palabrasclave'];
+		$photo=$_FILES['fichero_foto']['name'];
+		$estado=$_POST['estado'];
+		$categoria=$_POST['categoria'];
+		$marca=$_POST['marca'];
+		$arrayProducto = array(
+			"referencia" =>$referencia,
+			"nombre" => $nombre,
+			"descripcioncorta" => $descripcioncorta,
+			"valor" =>$valor,
+			"detalle"=>$detalle,
+			"palabrasclave"=>$palabrasclave,
+			"foto" => $photo,
+			"estado"=>$estado,
+			"categoria_id" => $categoria,
+			"marca_id"=>$marca
+		);
+		$modelPro=new ProductoDAO();
+		$modelPro->crear($arrayProducto);
+		$url='public/img_Productos/'.$photo;
+		if(move_uploaded_file($_FILES['fichero_foto']['tmp_name'],$url)){
+			header('Location: ../admin/productos');
+		}
+	}
+
+	function edit($id){
+		$referencia=$_POST['referencia'];
+		$valor=$_POST['valor'];
+		$nombre=$_POST['nombre'];
+		$descripcioncorta=$_POST['descripcioncorta'];
+		$detalle=$_POST['detalle'];
+		$palabrasclave=$_POST['palabrasclave'];
+		$modele=new ProductoDAO();
+		$producto=$modele->get($id);
+		if(!isset($_POST['fichero_foto'])){
+			$photo=$_FILES['fichero_foto']['name'];
+		}else{
+			$photo=$producto['foto'];
+		}
+		$estado=$_POST['estado'];
+		$categoria=$_POST['categoria'];
+		$marca=$_POST['marca'];
+		
+		$arrayProducto = array(
+			"id"=>$id,
+			"referencia" =>$referencia,
+			"nombre" => $nombre,
+			"descripcioncorta" => $descripcioncorta,
+			"valor" =>$valor,
+			"detalle"=>$detalle,
+			"palabrasclave"=>$palabrasclave,
+			"foto" => $photo,
+			"estado"=>$estado,
+			"categoria_id" => $categoria,
+			"marca_id"=>$marca
+		);
+		if($arrayProducto['foto']!=null){
+			$modelPro=new ProductoDAO();
+			$modelPro->editar($arrayProducto);
+			$url='public/img_Productos/'.$photo;
+			if(move_uploaded_file($_FILES['fichero_foto']['tmp_name'],$url)){
+				header('Location: '.BASE_URL.'admin/productos');
+			}
+		}else{
+			$modelPro=new ProductoDAO();
+			$modelPro->editar($arrayProducto);
+			header('Location: '.BASE_URL.'admin/productos');
+		}
+	}
+
 
 	function detalle($id){
 		$categoria=new CategoriaDAO();

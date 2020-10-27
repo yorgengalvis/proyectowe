@@ -14,103 +14,79 @@
             <center>Nuevo Producto</center>
         </div>
         <div class="card card-body">
-            <form action="<?=BASE_URL?>producto/edit/" method="POST" >
-
-
+            <form action="<?=BASE_URL?>producto/create" method="POST"  enctype="multipart/form-data">
                 <div class="form-row">
                     <div class="col-md-4 mb-2">
                         <label class="control-label">Referencia: </label>
                         <input type="text" class="form-control" id="referencia" name="referencia"
-                            placeholder="Digite Referencia">
+                            placeholder="Digite Referencia" required>
                     </div>
-
-
-
-
-
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite Nombre">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite Nombre" required>
                     </div>
-
-
-
-
-
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Descricion Corta: </label>
                         <input type="text" class="form-control" id="descripcioncorta" name="descripcioncorta"
-                            placeholder="Digite Descricion Corta">
+                            placeholder="Digite Descricion Corta" required>
                     </div>
-
-
-
                     <div class="col-md-4 mb-4">
                         <label class="control-label">Detalle: </label>
                         <textarea class="form-control" rows="3" id="detalle" name="detalle"
-                            placeholder="Digite Detalle"></textarea>
+                            placeholder="Digite Detalle" required></textarea>
                     </div>
-
-
-
-
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Valor: </label>
-                        <input type="text" class="form-control" id="valor" name="valor" placeholder="Digite Valor">
+                        <input type="number" class="form-control" id="valor" name="valor" placeholder="Digite Valor" required>
 
                     </div>
-
-
-
-
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Palabras Claves: </label>
                         <input type="text" class="form-control" id="palabrasclave" name="palabrasclave"
-                            placeholder="Digite Palabras Claves">
+                            placeholder="Digite Palabras Claves" required>
                     </div>
-
-
-
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Foto: </label>
                         <br>
-                        <input type="file" multiple="multiple" id="photo" />
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-cloud fa-stack-2x bottom pulsating"></i>
-                            <i class="fa fa-circle fa-stack-1x top medium"></i>
-                            <i class="fa fa-arrow-circle-up fa-stack-1x top"></i>
-                        </span>
+                        <input name="fichero_foto" type="file" / required>
                     </div>
-
-
 
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Estado:</label>
-                        <select class="form-control" id="state_id">
-                            <option value="disponible">Disponible</option>
-                            <option value="agotado">Agotado</option>
+                        <select class="form-control" name="estado" id="state_id" required>
+                            <option value="d">Disponible</option>
+                            <option value="n">Agotado</option>
 
                         </select>
                     </div>
-
-
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Categoria: </label>
-                        <input type="text" class="form-control" id="categoria" name="categoria"
-                            placeholder="Digite Categoria">
+                        <select class="form-control" name="categoria" id="state_id">
+                            <option value="0">Seleccione..</option>
+                            <?php
+                            foreach ($categorias as $categoria) {
+                                ?>
+                                <option value="<?=$categoria->id?>"><?=$categoria->descripcion?></option>
+                                <?php
+                            }
+                            ?>
+                        </select>
                     </div>
-
-
-
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Marca: </label>
-                        <input type="text" class="form-control" id="marca" name="marca" placeholder="Digite Marca">
+                        <select class="form-control" name="marca" id="state_id">
+                            <option value="0">Seleccione..</option>
+                            <?php
+                            foreach ($marcas as $marca) {
+                                ?>
+                                <option value="<?=$marca->id?>"><?=$marca->nombre?></option>
+                                <?php
+                            }
+                            ?>
+                        </select>
                     </div>
                     </div>
                 
-
-
-
                  <div class="form-group">
                     <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary">Guardar</button>

@@ -46,7 +46,7 @@
                 	break;
                 }
                 echo '</td>
-                <td><a href="edit_product/'.$producto->id.'"><span class="btn badge badge-warning"><span class="oi oi-pencil"></span> Editar</span></a> <a  onClick="eliminarP('.$producto->id.')"><span class="btn badge badge-danger"><span class="oi oi-x"></span>  Eliminar</span></a></td>
+                <td><a href="edit_product/'.$producto->id.'"><span class="btn badge badge-warning"><span class="oi oi-pencil"></span> Editar</span></a> <a  href="'.BASE_URL.'producto/eliminar/'.$producto->id.'"><span class="btn badge badge-danger"><span class="oi oi-x"></span>  Eliminar</span></a></td>
             </tr>';
 			}
         	?>

@@ -1,13 +1,13 @@
 <div class="container-fluid">
 	<nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index">Inicio</a></li>
-    <li class="breadcrumb-item active"><a href="marcas">Marcas</a></li>
+    <li class="breadcrumb-item"><a href="<?=BASE_URL?>admin/index">Inicio</a></li>
+    <li class="breadcrumb-item active"><a href="<?=BASE_URL?>admin/marcas">Marcas</a></li>
   </ol>
 </nav>
 </div>
 
-<div class="container">
+<div class="container-fluid">
 	<div class="titulo-venta">
 		Listado de Marcas
 	</div>

@@ -1,9 +1,9 @@
 <div class="container-fluid">
 	<nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index">Inicio</a></li>
-    <li class="breadcrumb-item"><a href="marcas">Marcas</a></li>
-    <li class="breadcrumb-item active"><a href="marcas">Editar</a></li>
+    <li class="breadcrumb-item"><a href="<?=BASE_URL?>index">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="<?=BASE_URL?>admin/marcas">Marcas</a></li>
+    <li class="breadcrumb-item active"><a href="<?=BASE_URL?>admin/edit_marca/<?=$marca->id?>">Editar</a></li>
   </ol>
 </nav>
 </div>
@@ -25,7 +25,7 @@
 
                     <div class="col-md-10 mb-3">
                         <label class="control-label">Descricion: </label>
-                        <textarea class="form-control" rows="3" id="descricion" name="descricion"
+                        <textarea class="form-control" rows="3" id="descricion" name="descripcion"
                             placeholder="Digite Descricion"></textarea>
                     </div>
 					</div>

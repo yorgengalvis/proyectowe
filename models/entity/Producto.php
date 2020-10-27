@@ -13,6 +13,7 @@ class Producto extends Model
         'valor',
         'palabrasclave',
         'estado',
+        'foto',
         'categoria_id',
         'marca_id'
     ];

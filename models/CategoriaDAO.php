@@ -7,14 +7,11 @@ class CategoriaDAO{
 
 
 	public function crear($arrayCategoria){
-	Empresa::create($arrayCategoria);
+	Categoria::create($arrayCategoria);
 	}
 
 	public function editar($arrayCategoria){
-	$categoria=Categoria::get($arrayCategoria);
-	$categoria->descripcion=$arrayCategoria->descripcion;
-	$categoria->estado=$arrayCategoria->estado;
-	$categoria->save();
+	Categoria::find($arrayCategoria['id'])->update($arrayCategoria);
 	}
 
 	public function eliminar($id){

@@ -13,17 +13,8 @@ class ProductoDAO
 	}
 
 	public function editar($arrayProducto){
-	$producto=Producto::get($arrayProducto->id);
-	$producto->referencia=$arrayProducto->referencia;
-	$producto->nombre=$arrayProducto->nombre;
-	$producto->descripcioncorta=$arrayProducto->descripcioncorta;
-	$producto->detalle=$arrayProducto->detalle;
-	$producto->valor=$arrayProducto->valor;
-	$producto->palabrasclave=$arrayProducto->palabrasclave;
-	$producto->estado=$arrayProducto->estado;
-	$producto->categoria_id=$arrayProducto->categoria_id;
-	$producto->marca_id=$arrayProducto->marca_id;
-	$producto->save();
+	Producto::find($arrayProducto['id'])->update(array('referencia' => $arrayProducto['referencia'] ,
+	'nombre'=>$arrayProducto['nombre'],'descripcioncorta'=> $arrayProducto['descripcioncorta'], 'detalle'=>$arrayProducto['detalle'], 'valor'=>$arrayProducto['valor'], 'palabrasclave'=>$arrayProducto['palabrasclave'], 'estado'=>$arrayProducto['estado'],'categoria_id'=>$arrayProducto['categoria_id'],'marca_id'=>$arrayProducto['marca_id'],'foto'=>$arrayProducto['foto']));
 	}
 
 	public function eliminar($id){
