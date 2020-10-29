@@ -13,7 +13,7 @@
 	</div>
 	<div class="table-responsive">
         <div class="nuevo-producto">
-            <a href="add_categoria"><span class="btn badge badge-success"><span class="oi oi-plus"></span> Nueva Marca</span></a>
+            <a href="add_marca"><span class="btn badge badge-success"><span class="oi oi-plus"></span> Nueva Marca</span></a>
         </div>
 		<table id="tablaProductos" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
         <thead>
@@ -32,7 +32,7 @@
                 <td>'.$marca->nombre.'</td>
                 <td style="width:50px;"><p style="text-align:justify;">'.$marca->descripcion.'</p></td>';
                 echo '
-                <td><a href="edit_marca/'.$marca->id.'"><span class="btn badge badge-warning"><span class="oi oi-pencil"></span> Editar</span></a> <a  onClick="eliminarM('.$marca->id.')"><span class="btn badge badge-danger"><span class="oi oi-x"></span>  Eliminar</span></a></td>
+                <td><a href="edit_marca/'.$marca->id.'"><span class="btn badge badge-warning"><span class="oi oi-pencil"></span> Editar</span></a> <a href="'.BASE_URL.'marca/delete/'.$marca->id.')"><span class="btn badge badge-danger"><span class="oi oi-x"></span>  Eliminar</span></a></td>
             </tr>';
 			}
         	?>

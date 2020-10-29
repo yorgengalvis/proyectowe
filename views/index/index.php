@@ -59,7 +59,7 @@ require_once 'views/modals/viewDetailsProduct.php';
             Siguenos
         </strong>
     </h4>
-    <iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="500" scrolling="no" src="https://www.facebook.com/plugins/page.php?href=<?php echo $empresas[0]->facebook;?>&tabs=timeline&width=250&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" style="border:none;overflow:hidden" width="250">
+    <iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="500" scrolling="no" src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/<?php echo $empresas[0]->facebook;?>&tabs=timeline&width=250&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" style="border:none;overflow:hidden" width="250">
     </iframe>
 </div>
 </div>

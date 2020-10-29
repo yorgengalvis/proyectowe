@@ -10,10 +10,7 @@ class MarcaDAO
 	}
 
 	public function editar($arrayMarca){
-	$marca=Marca::get($arrayMarca->id);
-	$marca->nombre=$arrayMarca->nombre;
-    $marca->descripcion=$arrayMarca->descripcion;
-	$marca->save();
+	Marca::find($arrayMarca['id'])->update($arrayMarca);
 	}
 
 	public function eliminar($id){
@@ -23,6 +20,10 @@ class MarcaDAO
 	public function find($opcion,$valor){
 		$marca = Marca::where($opcion,'=',$valor)->get();
 		return $marca;
+	}
+
+	public function get($id){
+		return Marca::find($id);
 	}
 
 	public function findAll(){

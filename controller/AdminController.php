@@ -4,6 +4,7 @@ require_once 'models/SliderDAO.php';
 require_once 'models/ProductoDAO.php';
 require_once 'models/CategoriaDAO.php';
 require_once 'models/MarcaDAO.php';
+require_once 'models/EmpresaDAO.php';
 
 class AdminController
 { 
@@ -46,6 +47,8 @@ class AdminController
 	}
 
 	function configuracion(){
+		$model=new EmpresaDAO();
+		$empresa=$model->find('nombre','MovilSec');
 		$this->validacionUsuario();
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/configuracion/index.php';
@@ -108,6 +111,8 @@ class AdminController
 		require_once 'views/admin/layout/footer.php';
 	}
 	function edit_marca($id){
+		$model=new MarcaDAO();
+		$marca=$model->get($id);
 		$this->validacionUsuario();
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/marcas/edit.php';

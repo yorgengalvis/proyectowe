@@ -26,18 +26,18 @@
                 
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite Nombre">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite Nombre" value="<?=$empresa[0]->nombre?>">
                     </div>
 
                         <div class="col-md-4 mb-3">
                         <label class="control-label">Email de Contacto: </label>
-                        <input type="text" class="form-control" id="nombre" name="escriemailcontactocion" placeholder="Digite Email de Contacto">                       
+                        <input type="text" class="form-control" id="nombre" name="escriemailcontactocion" placeholder="Digite Email de Contacto" value="<?=$empresa[0]->emailcontacto?>">                        
                     </div>
 
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Quienes Somos:</label>
                         <textarea class="form-control" rows="3" id="quienessomos" name="Digite Quienes Somos"
-                            placeholder="Digite Descricion"></textarea>
+                            placeholder="Digite Descricion"><?=$empresa[0]->quienessomos?></textarea>
                     </div>
 
 
@@ -45,17 +45,17 @@
 
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Direccion:</label>
-                        <input type="text" class="form-control" id="nombre" name="direccion" placeholder="Digite Direccion">
+                        <input type="text" class="form-control" id="nombre" name="direccion" placeholder="Digite Direccion" value="<?=$empresa[0]->direccion?>">
                     </div>
 
                 
                 <div class="col-md-4 mb-3">
                     <label class="control-label">Telefono de Contacto:</label>
-                    <input type="text" class="form-control" id="nombre" name="telefonocontacto" placeholder="Digite Telefono de Contacto">
+                    <input type="text" class="form-control" id="nombre" name="telefonocontacto" placeholder="Digite Telefono de Contacto" value="<?=$empresa[0]->telefonocontacto?>">
                 </div>
                 <div class="col-md-4 mb-3">
                     <label class="control-label">Facebook:</label>
-                    <input type="text" class="form-control" id="nombre" name="facebook" placeholder="Digite Facebook">
+                    <input type="text" class="form-control" id="nombre" name="facebook" placeholder="Digite Facebook" value="<?=$empresa[0]->faceboook?>">
                 </div>
                 <div class="col-md-4 mb-3">
                     <label class="control-label">Twiter:</label>

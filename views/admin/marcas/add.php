@@ -14,7 +14,7 @@
 			<center>Nueva Marca</center>
 		</div>
 		<div class="card card-body">
-			<form action="<?=BASE_URL?>producto/edit/" method="POST">
+			<form action="<?=BASE_URL?>marca/add" method="POST">
 			<div class="form-row">
                     
 
@@ -25,8 +25,8 @@
 
 
                     <div class="col-md-10 mb-3">
-                        <label class="control-label">Descricion: </label>
-                        <textarea class="form-control" rows="3" id="descricion" name="descricion"
+                        <label class="control-label">Descripcion: </label>
+                        <textarea class="form-control" rows="3" id="descripcion" name="descripcion"
                             placeholder="Digite Descricion"></textarea>
                     </div>
 					</div>

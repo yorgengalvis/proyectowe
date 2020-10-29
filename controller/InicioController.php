@@ -24,6 +24,7 @@ class InicioController
 		require_once 'views/index/index.php';
 		require_once 'views/layout/footer.php';
 	}
+	
 	 function login(){
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/login/login.php';

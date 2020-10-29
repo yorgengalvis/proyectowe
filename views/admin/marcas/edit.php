@@ -13,20 +13,20 @@
 			<center>Modificacion de Marca</center>
 		</div>
 		<div class="card card-body">
-			<form action="<?=BASE_URL?>producto/edit/" method="POST">
+			<form action="<?=BASE_URL?>marca/edit/<?=$marca->id?>" method="POST">
 			<div class="form-row">
                     
 
                     <div class="col-md-10 mb-3">
                         <label class="control-label">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite Nombre">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite Nombre" value="<?=$marca->nombre?>">
                     </div>
 
 
                     <div class="col-md-10 mb-3">
                         <label class="control-label">Descricion: </label>
                         <textarea class="form-control" rows="3" id="descricion" name="descripcion"
-                            placeholder="Digite Descricion"></textarea>
+                            placeholder="Digite Descricion"><?=$marca->descripcion?></textarea>
                     </div>
 					</div>
 
