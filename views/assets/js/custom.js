@@ -1,6 +1,14 @@
 $(document).ready(function() {
     $('#tablaProductos').DataTable();
     $('#labelURL').hide();
+    tinymce.init({
+        selector: 'textarea'
+    });
+    $("select[name=slider-option]").change(function() {
+        if ($('select[name=slider-option]').val() != 0) {
+            $('#contenido-slider').load('consultaSlider/' + $('select[name=slider-option]').val(), function() {});
+        }
+    });
 });
 
 function modProducto(id) {

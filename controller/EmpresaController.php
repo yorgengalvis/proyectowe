@@ -17,7 +17,9 @@ class EmpresaController
 
 	function editar(){
 		$model=new EmpresaDAO();
-		$model->editar($id,$arrayEmpresa);
+		$arrayEmpresa=array('id' => 0,'quienessomos'=>$_POST['quienessomos'],'emailcontacto'=>$_POST['email-contacto'], 'direccion'=>$_POST['direccion'], 'telefonocontacto'=>$_POST['telefonocontacto'], 'facebook'=>$_POST['facebook'],'instagram'=>$_POST['instagram'],'twitter'=>$_POST['twitter']);
+		$model->editar($arrayEmpresa);
+		header('Location: '.BASE_URL.'admin/configuracion');
 	}
 
 }

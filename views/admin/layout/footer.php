@@ -15,6 +15,7 @@
 </script>
 <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 <script  src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+<script src='https://cdn.tiny.cloud/1/radwjx6bqyv5qrbpxok3itnse13csnwjloodas1w37ygtpyx/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
 <script src="<?php echo BASE_URL;?>views/assets/js/custom.js">
 </script>
 </body>

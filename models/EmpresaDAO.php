@@ -10,17 +10,8 @@ class EmpresaDAO
 	Empresa::create($arrayEmpresa);
 	}
 
-	public function editar($id,$arrayEmpresa){
-		$empresa=Empresa::get($id);
-		$empresa->nombre=$arrayEmpresa->nombre;
-	$empresa->quienessomos=$arrayEmpresa->quienessomos;
-	$empresa->emailcontacto=$arrayEmpresa->emailcontacto;
-	$empresa->direccion=$arrayEmpresa->direccion;
-	$empresa->telefonocontacto=$arrayEmpresa->telefonocontacto;
-	$empresa->facebook=$arrayEmpresa->facebook;
-	$empresa->twitter=$arrayEmpresa->twitter;
-	$empresa->instagram=$arrayEmpresa->instagram;
-	$empresa->save();
+	public function editar($arrayEmpresa){
+		Empresa::find($arrayEmpresa['id'])->update($arrayEmpresa);
 	}
 
 	public function eliminar($id){

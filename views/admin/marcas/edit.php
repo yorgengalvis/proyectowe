@@ -24,7 +24,7 @@
 
 
                     <div class="col-md-10 mb-3">
-                        <label class="control-label">Descricion: </label>
+                        <label class="control-label">Descripcion: </label>
                         <textarea class="form-control" rows="3" id="descricion" name="descripcion"
                             placeholder="Digite Descricion"><?=$marca->descripcion?></textarea>
                     </div>

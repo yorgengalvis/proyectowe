@@ -14,6 +14,11 @@ class AdminController
         $this->usersesion=null;
     }
 
+    function consultaSlider($id){
+    	$model=new SliderDAO();
+    	$model->consultaSlider($id);
+    }
+
     function index(){
 		session_start();
 		if($_SESSION['admin']){

@@ -21,56 +21,50 @@
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 
-            
+                <form action="<?=BASE_URL?>empresa/editar" method="POST">
                 <div class="form-row">
-                
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite Nombre" value="<?=$empresa[0]->nombre?>">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite Nombre" value="<?=$empresa[0]->nombre?>" disabled>
                     </div>
 
                         <div class="col-md-4 mb-3">
                         <label class="control-label">Email de Contacto: </label>
-                        <input type="text" class="form-control" id="nombre" name="escriemailcontactocion" placeholder="Digite Email de Contacto" value="<?=$empresa[0]->emailcontacto?>">                        
+                        <input type="text" class="form-control" id="email-contacto" name="email-contacto" placeholder="Digite Email de Contacto" value="<?=$empresa[0]->emailcontacto?>">                        
                     </div>
-
-                    <div class="col-md-4 mb-3">
-                        <label class="control-label">Quienes Somos:</label>
-                        <textarea class="form-control" rows="3" id="quienessomos" name="Digite Quienes Somos"
-                            placeholder="Digite Descricion"><?=$empresa[0]->quienessomos?></textarea>
-                    </div>
-
-
-                   
 
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Direccion:</label>
-                        <input type="text" class="form-control" id="nombre" name="direccion" placeholder="Digite Direccion" value="<?=$empresa[0]->direccion?>">
+                        <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Digite Direccion" value="<?=$empresa[0]->direccion?>">
                     </div>
 
-                
                 <div class="col-md-4 mb-3">
                     <label class="control-label">Telefono de Contacto:</label>
-                    <input type="text" class="form-control" id="nombre" name="telefonocontacto" placeholder="Digite Telefono de Contacto" value="<?=$empresa[0]->telefonocontacto?>">
+                    <input type="text" class="form-control" id="telefonocontacto" name="telefonocontacto" placeholder="Digite Telefono de Contacto" value="<?=$empresa[0]->telefonocontacto?>">
                 </div>
                 <div class="col-md-4 mb-3">
-                    <label class="control-label">Facebook:</label>
-                    <input type="text" class="form-control" id="nombre" name="facebook" placeholder="Digite Facebook" value="<?=$empresa[0]->faceboook?>">
+                    <label class="control-label">Facebook ID:</label>
+                    <input type="text" class="form-control" id="facebook" name="facebook" placeholder="Digite Facebook" value="<?=$empresa[0]->facebook?>">
                 </div>
                 <div class="col-md-4 mb-3">
-                    <label class="control-label">Twiter:</label>
-                    <input type="text" class="form-control" id="nombre" name="twiter" placeholder="Digite Twiter">
+                    <label class="control-label">Twiter User:</label>
+                    <input type="text" class="form-control" id="twitter" name="twitter" placeholder="Digite Twiter" value="<?=$empresa[0]->twitter?>">
                 </div>
                 <div class="col-md-4 mb-3">
-                    <label class="control-label">Instagram:</label>
-                    <input type="text" class="form-control" id="nombre" name="instagram" placeholder="Digite Instagram">
-                </div>          
+                    <label class="control-label">Instagram User: </label>
+                    <input type="text" class="form-control" id="instagram" name="instagram" placeholder="Digite Instagram" value="<?=$empresa[0]->instagram?>">
+                </div>
+                <div class="col-md-8 mb-3">
+                        <label class="control-label">Quienes Somos:</label>
+                        <textarea class="form-control" rows="3" id="quienessomos" name="quienessomos"
+                            placeholder="Digite Descricion"><?=$empresa[0]->quienessomos?></textarea>
+                    </div>          
                 </div>
                 <div class="form-group">
                     <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
-                
+                </form>
             </div>
         </div>
         <div class="card">
@@ -84,41 +78,20 @@
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-                <div class="form-row">
-                    
-
-                    <div class="col-md-10 mb-3">
-                        <label class="control-label">Foto de Slider:</label>
-                        <br>
-                        <input type="file" multiple="multiple" id="photo" />
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-cloud fa-stack-2x bottom pulsating"></i>
-                            <i class="fa fa-circle fa-stack-1x top medium"></i>
-                            <i class="fa fa-arrow-circle-up fa-stack-1x top"></i>
-                        </span>
+                    <div class="row">
+                       <div class="col-md-8">
+                        <label class="control-label">Selecciona el slider a configurar</label>
+                        <select class="form-control" name="slider-option" id="slider-option">
+                            <option value="0" selected>Seleccione..</option>
+                            <option value="1">Slider 1</option>
+                            <option value="2">Slider 2</option>
+                            <option value="3">Slider 3</option>
+                        </select>
                     </div>
-
-                    <div class="col-md-10 mb-3">
-                        <label class="control-label">Titulo:</label>
-                        <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Digite Titulo de Slider">
                     </div>
-
-
-
-                    <div class="col-md-10 mb-3">
-                        <label class="control-label">Descricion: </label>
-                        <textarea class="form-control" rows="3" id="descricion" name="descricion"
-                            placeholder="Digite Descricion"></textarea>
-                    </div>
-					</div>
-
-
-
-                 <div class="form-group">
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn btn-primary">Guardar</button>
-                 </div>
-
+                    <br>
+                    <br>
+                    <div id="contenido-slider"></div>
                 </div>
             </div>
         </div>
@@ -132,16 +105,16 @@
                 </h2>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                    labore sustainable VHS.
-                </div>
+                <div class="card-body text-justify">
+                    El sistema de gestion de servicios/productos fue desarrollado por estudiantes de 
+to semestre de Ingenieria de Sistemas de la <a href="https://ww2.ufps.edu.co/">UFPS  Cúcuta</a> para la Materia Programación WEB               </div>
+    <div class="row">
+        <div class="col-sm">Yorgen Galvis</div>
+        <div class="col-sm">Andrey Rivera</div>
+        <div class="col-sm">Camilo Galvan</div>
+    </div>
             </div>
         </div>
+        <br>
     </div>
 </div>

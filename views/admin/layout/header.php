@@ -4,7 +4,7 @@ error_reporting(0);
 session_start();
         $administrador=$_SESSION['admin'];
 ?>
-<!DOCTYPE doctype html>
+<!DOCTYPE HTML>
 <html lang="es">
 <head>
   <meta charset="utf-8">
