@@ -111,7 +111,7 @@ class ProductoController
 		$palabrasclave=$_POST['palabrasclave'];
 		$modele=new ProductoDAO();
 		$producto=$modele->get($id);
-		if(!isset($_POST['fichero_foto'])){
+		if($_FILES['fichero_foto']['size']>0){
 			$photo=$_FILES['fichero_foto']['name'];
 		}else{
 			$photo=$producto['foto'];
@@ -133,7 +133,7 @@ class ProductoController
 			"categoria_id" => $categoria,
 			"marca_id"=>$marca
 		);
-		if($arrayProducto['foto']!=null){
+		if($_FILES['fichero_foto']['size']>0){
 			$modelPro=new ProductoDAO();
 			$modelPro->editar($arrayProducto);
 			$url='public/img_Productos/'.$photo;
