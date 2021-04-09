@@ -7,7 +7,7 @@
 </nav>
 </div>
 
-<div class="container-fluid">
+<div class="container">
 	<div class="titulo-venta">
 		Listado de Marcas
 	</div>

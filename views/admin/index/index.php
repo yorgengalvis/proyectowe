@@ -1,6 +1,7 @@
 <center><h3><b>Sliders de la pagina principal<b></h3></center>
 <p>
 <!--SLIDER-->
+<div class="container">
 <div class="carousel slide carousel-fade" data-ride="carousel" id="carousel1">
     <div class="carousel-inner">
 
@@ -67,4 +68,5 @@ echo '<div class="carousel-item active">
     <li data-slide-to="2" data-target="#carousel1">
     </li>
 </ol>
+</div>
 </div>

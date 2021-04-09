@@ -1,9 +1,9 @@
 </br>
-<footer>
+<div class="footer">
 	<div class="containter" style="text-align:center;">
      &copy; 2020 Yorgen Galvis. Todos los derechos reservados
     </div>
-</footer>
+</div>
   <!--Inclusión JS-->
 <script
   src="https://code.jquery.com/jquery-3.5.1.js"

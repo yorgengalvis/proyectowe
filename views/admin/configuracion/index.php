@@ -8,7 +8,7 @@
 </div>
 
 <div class="container">
-    <div class="accordion" id="accordionExample">
+    <div class="container accordion" id="accordionExample">
         <div class="card">
             <div class="card card-header" id="headingOne">
                 <h2 class="mb-0">
@@ -19,9 +19,10 @@
                 </h2>
             </div>
 
+            <div class="container">
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 
-                <form action="<?=BASE_URL?>empresa/editar" method="POST">
+                <form class="form-config" action="<?=BASE_URL?>empresa/editar" method="POST">
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
                         <label class="control-label">Nombre:</label>
@@ -65,6 +66,7 @@
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
                 </form>
+            </div>
             </div>
         </div>
         <div class="card">

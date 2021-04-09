@@ -13,7 +13,7 @@
 </head>
 <body>
     <!--menu-->
-    <nav class="navbar navbar-light bg-blue-ligth fixed-top">
+    <nav class="navbar navbar-light bg-blue-ligth fixed">
         <div class="container-fluid">
             <a class="navbar-brand" href="<?=BASE_URL?>inicio">
                 <img alt="" loading="lazy" src="<?php echo BASE_URL;?>views/assets/img/logo.png" width="50%">
@@ -27,6 +27,8 @@
     </div>
 </nav>
 <!--menu-->
+<section class="slider-options">
+    
 <!--SLIDER-->
 <div class="carousel slide carousel-fade" data-ride="carousel" id="carousel1">
     <div class="carousel-inner">
@@ -37,7 +39,7 @@
 
             if($i>0){
                 echo '<div class="carousel-item">
-            <img alt="Los Angeles" src="'.BASE_URL.'views/assets/img/'.$slider->foto.'">
+            <img class="img-slider" alt="Los Angeles" src="'.BASE_URL.'views/assets/img/'.$slider->foto.'">
             <div class="carousel-caption">
                 <h3>
                    <b>'.$slider->titulo.'</b>
@@ -95,3 +97,4 @@ echo '<div class="carousel-item active">
     </li>
 </ol>
 </div>
+</section>

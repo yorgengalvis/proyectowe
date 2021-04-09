@@ -1,3 +1,40 @@
+html {
+    min-height: 100%;
+    position: relative;
+  }
+
 .card {
     width: 100% !important;
 }
+
+.card-header{
+    color:white !important;
+    background-color: #009def !important;
+}
+
+.btn-link{
+color:white !important;
+}
+
+.form-config{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+    position:fixed-bottom;
+}
+
+.footer{
+    position: absolute;
+    bottom: 10;
+    width: 100%;
+    height: 40px;
+      position:fixed-bottom;
+      color:white;
+      background-color: #009def;
+  }

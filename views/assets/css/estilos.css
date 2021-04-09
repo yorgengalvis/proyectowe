@@ -1,6 +1,8 @@
 * {
     font-family: Century Gothic, 'sans-serif';
 }
+
+
 @media (min-width: 310px) and (max-width:500px) {
     footer {
         align-items: center;
@@ -25,6 +27,18 @@
         text-align: center !important;
     }
 }
+
+.card{
+    padding-bottom: 5%;
+}
+.img-slider{
+    width: 100%;
+}
+
+.carousel-item{
+    width: 100%;
+}
+
 .bg-blue-ligth {
     background-color: #009dff !important;
     color: white !important;
@@ -91,6 +105,12 @@ h3, h4 {
     width: 80px;
     height: 100px;
 }
+
+.slider-options{
+    width: 100%;
+    background-color: red;;
+}
+
 .col-sm {
     padding: 7px;
 }

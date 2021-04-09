@@ -57,7 +57,7 @@ class AdminController
 		$this->validacionUsuario();
 		require_once 'views/admin/layout/header.php';
 		require_once 'views/admin/configuracion/index.php';
-		require_once 'views/admin/layout/footer.php';
+		require_once 'views/admin/layout/footer2.php';
 	}
 
 	function marcas(){
